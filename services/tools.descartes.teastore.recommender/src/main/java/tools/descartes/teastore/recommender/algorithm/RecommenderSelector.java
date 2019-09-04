@@ -33,7 +33,7 @@ import tools.descartes.teastore.entities.OrderItem;
 
 /**
  * A strategy selector for the Recommender functionality.
- * 
+ *
  * @author Johannes Grohmann
  *
  */
@@ -49,8 +49,8 @@ public final class RecommenderSelector implements IRecommender {
 		recommenders = new HashMap<String, Class<? extends IRecommender>>();
 		recommenders.put("Popularity", PopularityBasedRecommender.class);
 		recommenders.put("SlopeOne", SlopeOneRecommender.class);
-		recommenders.put("PreprocessedSlopeOne", PreprocessedSlopeOneRecommender.class);
-		recommenders.put("OrderBased", OrderBasedRecommender.class);
+		// recommenders.put("PreprocessedSlopeOne", PreprocessedSlopeOneRecommender.class);
+		// recommenders.put("OrderBased", OrderBasedRecommender.class);
 	}
 
 	/**
@@ -127,7 +127,7 @@ public final class RecommenderSelector implements IRecommender {
 	/**
 	 * Returns the instance of this Singleton or creates a new one, if this is the
 	 * first call of this method.
-	 * 
+	 *
 	 * @return The instance of this class.
 	 */
 	public static synchronized RecommenderSelector getInstance() {
@@ -139,7 +139,7 @@ public final class RecommenderSelector implements IRecommender {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * tools.descartes.teastore.recommender.IRecommender#train(java.util.List,
 	 * java.util.List)
